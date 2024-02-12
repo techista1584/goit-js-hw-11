@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: white;
+  line-height: 1.5;
+  margin: 0;
+  background-color: #212121;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 300px) {
+  .searching-box {
+    display: flex;
+    background-color:rgb(11, 132, 136);
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  .search-form {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  input {
+    width: 220px;
+    height: 32px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    padding: 8px;
+    outline: none;
+  }
+
+  .search-btn {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor:pointer;
+    fill: rgb(7, 48, 48);
+    background-color: rgba(245, 237, 237, 0.368);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .search-btn:hover,
+  .search-btn:focus {
+    fill: rgba(245, 237, 237, 0.368);
+    background-color: rgb(7, 48, 48);
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 6px 6px;
+    justify-content: center;
+    margin: 10px;
+    justify-content: center;
+  }
+
+  .photo-card {
+    display: block;
+    width: calc(90vw - 10px);
+    height: calc(85vw - 5px);
+    margin: 5px;
+    box-shadow: 3px 3px 3px 0px rgba(184, 178, 178, 0.7);
+    -webkit-box-shadow: 3px 3px 3px 0px rgba(184, 178, 178, 0.7);
+    -moz-box-shadow: 3px 3px 3px 0px rgba(184, 178, 178, 0.7);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 10px;
+  }
+
+  .gallery__image {
+    width: 100%;
+    height: 80%;
+  }
+
+  .info {
+    display: flex;
+    font-size: 12px;
+    justify-content: space-around;
+  }
+
+  .info-item {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .info {
+    font-size: 15px;
+  }
+
+  input {
+    width: 240px;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  input {
+    width: 260px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .photo-card {
+    width: calc(45vw - 5px);
+    height: calc(39vw - 5px);
+  }
+
+  .info {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .info {
+    font-size: 15px;
+  }
+
+  input {
+    width: 280px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  input {
+    width: 300px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .photo-card {
+    width: calc(31vw - 5px);
+    height: calc(26vw - 5px);
+  }
+
+  .info {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  input {
+    width: 320px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .photo-card {
+    width: calc(24vw - 5px);
+    height: calc(20vw - 5px);
+  }
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.load-more {
+  margin-bottom: 10px;
+  width: 202px;
+  min-height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: white;
+  background-color: rgb(11, 132, 136);
+  border: none;
+  box-shadow: 0 4px 4px 0 rgba(248, 246, 246, 0.15);
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: color 250ms linear;
+}
+
+.load-more:hover {
+  background-color: rgb(13, 241, 233);
+  box-shadow: none;
+  color: #212121;
+}
+
+.up-btn {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  background-color: rgb(15, 155, 150);
+  border: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.up-btn:hover {
+  background-color: rgb(13, 241, 233);
+  box-shadow: none;
+  color: #212121;
+}
