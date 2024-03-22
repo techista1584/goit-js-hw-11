@@ -5,11 +5,11 @@
   "homepage": "https://techista1584.github.io/image-finder",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /image-finder/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-11/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/techista1584.github.io/image-finder"
+    "url": "git+https://github.com/techista1584.github.io/goit-js-hw-11"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
